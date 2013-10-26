@@ -6,10 +6,10 @@
  * The main page view - including the form and the output printing area.
  */
 $path = dirname($_SERVER['PHP_SELF']).'/view/';
-	if($return_message_array && isset($return_message_array['error'])) {
+	if(isset($return_message_array) && isset($return_message_array['error'])) {
 		$error = $return_message_array['error'];
 		$text = $return_message_array['content'];
-	} else if($return_message_array) {
+	} else if(isset($return_message_array)) {
 		$success = "Your message was submitted";
 	}
 ?>
@@ -38,19 +38,19 @@ $path = dirname($_SERVER['PHP_SELF']).'/view/';
 
         <!-- Add your site or application content here -->
 		<h1>Secrets... </h1>
-		<?php if($error): ?>
+		<?php if(isset($error)): ?>
 			<div class='error'>
 				<?php print $error; ?>
 			</div>
 		<?php endif; ?>
-		<?php if($success): ?>
+		<?php if(isset($success)): ?>
 			<div class='success'>
 				Your message submitted.
 			</div>
 		<?php endif; ?>
 		<p>Post your most intimate thoughts here..</p>
 		<form action="<?php echo $_SERVER['PHP_SELF'].'?page=message' ?>" method="post">
-			<textarea rows="20" cols="200" id='message' name='message'><?php if($error) {print $text;}?></textarea>
+			<textarea rows="20" cols="200" id='message' name='message'><?php if(isset($error)) {print $text;}?></textarea>
 			<input type="submit" value="Confess">
 		</form>
 

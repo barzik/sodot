@@ -28,7 +28,9 @@ class Registry {
      * Setter of registry item
      *
      * @param key   The key of the item
-	 * @param value   The value of the item
+	 * @param val   The value of the item
+	 *
+	 * @return NULL
      */
 	
     public function __set($key, $val) {
@@ -40,7 +42,7 @@ class Registry {
      *
      * @param key   The key of the item
 	 *
-	 * @return          The value of the registry item. NULL if not item was found.
+	 * @return	The value of the registry item. NULL if not item was found.
      */
 
 	public function __get($key) {
