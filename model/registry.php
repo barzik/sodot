@@ -21,7 +21,7 @@ class Registry {
      * Constructor of Registry
      */
 	public function __construct() {
-		$this->vars = parse_ini_file(realpath('settings.ini'));
+		$this->vars = parse_ini_file(realpath('../settings.ini'));
 	}
 	
 	 /**
@@ -49,7 +49,10 @@ class Registry {
 		if (array_key_exists($key, $this->vars)) {
 			return $this->vars[$key];
 		} else {
-		return null;
+			return null;
 		}
     }
+	
+	
+	
 }
