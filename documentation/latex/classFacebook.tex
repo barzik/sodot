@@ -1,0 +1,117 @@
+\hypertarget{classFacebook}{\section{Facebook Class Reference}
+\label{classFacebook}\index{Facebook@{Facebook}}
+}
+Inheritance diagram for Facebook\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classFacebook}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFacebook_a764229508830d143551d167e786c42f4}{\-\_\-\-\_\-construct} (\$config)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFacebook_ae225a7e23884e520cf9939025c35caec}{const {\bfseries F\-B\-S\-S\-\_\-\-C\-O\-O\-K\-I\-E\-\_\-\-N\-A\-M\-E} = 'fbss'}\label{classFacebook_ae225a7e23884e520cf9939025c35caec}
+
+\item 
+\hypertarget{classFacebook_a42b34f4010aeda2c7ec1198952b17ba1}{const {\bfseries F\-B\-S\-S\-\_\-\-C\-O\-O\-K\-I\-E\-\_\-\-E\-X\-P\-I\-R\-E} = 31556926}\label{classFacebook_a42b34f4010aeda2c7ec1198952b17ba1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFacebook_a18069ee9f99437fd37fdb60bb2434052}{{\bfseries init\-Shared\-Session} ()}\label{classFacebook_a18069ee9f99437fd37fdb60bb2434052}
+
+\item 
+\hyperlink{classFacebook_a8f094cc1c798c533283018a8100dffdf}{set\-Persistent\-Data} (\$key, \$value)
+\item 
+\hypertarget{classFacebook_a87953f6e9607dbd1f669d01c7d4098d0}{{\bfseries get\-Persistent\-Data} (\$key, \$default=false)}\label{classFacebook_a87953f6e9607dbd1f669d01c7d4098d0}
+
+\item 
+\hypertarget{classFacebook_a1a953ac1cb01d079715a0922f3e566ac}{{\bfseries clear\-Persistent\-Data} (\$key)}\label{classFacebook_a1a953ac1cb01d079715a0922f3e566ac}
+
+\item 
+\hypertarget{classFacebook_abc8a9a05ccd6ba5905169e775bd5b9fc}{{\bfseries clear\-All\-Persistent\-Data} ()}\label{classFacebook_abc8a9a05ccd6ba5905169e775bd5b9fc}
+
+\item 
+\hypertarget{classFacebook_ae1c5929de51ce3330d6e15cc6a4b046d}{{\bfseries delete\-Shared\-Session\-Cookie} ()}\label{classFacebook_ae1c5929de51ce3330d6e15cc6a4b046d}
+
+\item 
+\hypertarget{classFacebook_acb13e9abc11591d4a7c8b90b84125b32}{{\bfseries get\-Shared\-Session\-Cookie\-Name} ()}\label{classFacebook_acb13e9abc11591d4a7c8b90b84125b32}
+
+\item 
+\hypertarget{classFacebook_ac5837cfbd8b442d7e163f4ee2d93a546}{{\bfseries construct\-Session\-Variable\-Name} (\$key)}\label{classFacebook_ac5837cfbd8b442d7e163f4ee2d93a546}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFacebook_ad10ffcca82182e3319c6190c71a51d58}{{\bfseries \$shared\-Session\-I\-D}}\label{classFacebook_ad10ffcca82182e3319c6190c71a51d58}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static {\bfseries \$k\-Supported\-Keys}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Copyright 2011 \hyperlink{classFacebook}{Facebook}, Inc.
+
+Licensed under the Apache License, Version 2.\-0 (the \char`\"{}\-License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb}http://www.apache.org/licenses/LICENSE-2.0
+\end{DoxyVerb}
+
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\-A\-S I\-S\char`\"{} B\-A\-S\-I\-S, W\-I\-T\-H\-O\-U\-T W\-A\-R\-R\-A\-N\-T\-I\-E\-S O\-R C\-O\-N\-D\-I\-T\-I\-O\-N\-S O\-F A\-N\-Y K\-I\-N\-D, either express or implied. See the License for the specific language governing permissions and limitations under the License. Extends the \hyperlink{classBaseFacebook}{Base\-Facebook} class with the intent of using P\-H\-P sessions to store user ids and access tokens. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFacebook_a764229508830d143551d167e786c42f4}{\index{Facebook@{Facebook}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!Facebook@{Facebook}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}Facebook\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$config}
+\end{DoxyParamCaption}
+)}}\label{classFacebook_a764229508830d143551d167e786c42f4}
+Identical to the parent constructor, except that we start a P\-H\-P session to store the user I\-D and access token if during the course of execution we discover them.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Array & {\em \$config} & the application configuration. Additionally accepts \char`\"{}shared\-Session\char`\"{} as a boolean to turn on a secondary cookie for environments with a shared session (that is, your app shares the domain with other apps). \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classBaseFacebook_af8ca4863484827e521f5052f5dfed642}{Base\-Facebook\-::\-\_\-\-\_\-construct} in facebook.\-php 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFacebook_a8f094cc1c798c533283018a8100dffdf}{\index{Facebook@{Facebook}!set\-Persistent\-Data@{set\-Persistent\-Data}}
+\index{set\-Persistent\-Data@{set\-Persistent\-Data}!Facebook@{Facebook}}
+\subsubsection[{set\-Persistent\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Facebook\-::set\-Persistent\-Data (
+\begin{DoxyParamCaption}
+\item[{}]{\$key, }
+\item[{}]{\$value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classFacebook_a8f094cc1c798c533283018a8100dffdf}
+Provides the implementations of the inherited abstract methods. The implementation uses P\-H\-P sessions to maintain a store for authorization codes, user ids, C\-S\-R\-F states, and access tokens. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classFacebook_add8165dc97d4fc63e7745f8011e53218}{\index{Facebook@{Facebook}!\$k\-Supported\-Keys@{\$k\-Supported\-Keys}}
+\index{\$k\-Supported\-Keys@{\$k\-Supported\-Keys}!Facebook@{Facebook}}
+\subsubsection[{\$k\-Supported\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}Facebook\-::\$k\-Supported\-Keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classFacebook_add8165dc97d4fc63e7745f8011e53218}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+    array(\textcolor{stringliteral}{'state'}, \textcolor{stringliteral}{'code'}, \textcolor{stringliteral}{'access\_token'}, \textcolor{stringliteral}{'user\_id'})
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+model/third\-\_\-party/facebook-\/php-\/sdk-\/master/src/facebook.\-php\end{DoxyCompactItemize}

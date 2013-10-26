@@ -1,0 +1,78 @@
+\hypertarget{classDatabase}{\section{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+}
+
+
+D\-B functions -\/ extending P\-D\-O class.  
+
+
+Inheritance diagram for Database\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDatabase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDatabase_abdd02ab861336df29f786db5368f7ff4}{check\-Table} (\$table)
+\item 
+\hyperlink{classDatabase_a8a449ab499e2c33437c78e12a0f8d91a}{write\-\_\-record} (\$array)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDatabase_a8399325825e893103c463e644f817f86}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-B functions -\/ extending P\-D\-O class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classDatabase_abdd02ab861336df29f786db5368f7ff4}{\index{Database@{Database}!check\-Table@{check\-Table}}
+\index{check\-Table@{check\-Table}!Database@{Database}}
+\subsubsection[{check\-Table}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::check\-Table (
+\begin{DoxyParamCaption}
+\item[{}]{\$table}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_abdd02ab861336df29f786db5368f7ff4}
+Check if table exist
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & The table name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tr\-U\-E if table exist, F\-A\-L\-S\-E if not. 
+\end{DoxyReturn}
+\hypertarget{classDatabase_a8399325825e893103c463e644f817f86}{\index{Database@{Database}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Database@{Database}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static Database\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDatabase_a8399325825e893103c463e644f817f86}
+The constructor of the \hyperlink{classDatabase}{Database} singleton class \hypertarget{classDatabase_a8a449ab499e2c33437c78e12a0f8d91a}{\index{Database@{Database}!write\-\_\-record@{write\-\_\-record}}
+\index{write\-\_\-record@{write\-\_\-record}!Database@{Database}}
+\subsubsection[{write\-\_\-record}]{\setlength{\rightskip}{0pt plus 5cm}Database\-::write\-\_\-record (
+\begin{DoxyParamCaption}
+\item[{}]{\$array}
+\end{DoxyParamCaption}
+)}}\label{classDatabase_a8a449ab499e2c33437c78e12a0f8d91a}
+Write arrays to table
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The data in format of key =$>$ value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The I\-D of the row inerted. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+model/\hyperlink{database_8php}{database.\-php}\end{DoxyCompactItemize}

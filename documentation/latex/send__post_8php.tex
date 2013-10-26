@@ -1,0 +1,81 @@
+\hypertarget{send__post_8php}{\section{model/send\-\_\-post.php File Reference}
+\label{send__post_8php}\index{model/send\-\_\-post.\-php@{model/send\-\_\-post.\-php}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{send__post_8php_a7c00c6a4981f55404b49962a66b0746a}{\-\_\-\-\_\-construct} (\$\hyperlink{send__post_8php_aab26cf0bb1048ee920848ba27fa96168}{message})
+\item 
+\hyperlink{send__post_8php_aab26cf0bb1048ee920848ba27fa96168}{message} (\$data)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Class {\bfseries Send\-\_\-post}
+\item 
+\hyperlink{send__post_8php_a0690e3943aac124dbebc20bfb9419da3}{\$page\-\_\-id} = ''
+\item 
+\hyperlink{send__post_8php_a1cce3b6b968431b6802980fa6f949d13}{\$post\-\_\-url} = ''
+\item 
+\hyperlink{send__post_8php_a07610c5842cbcf4e9df3c0cc291ddc15}{\$page\-\_\-access\-\_\-token} = ''
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Send post model
+
+Activating the Face\-Book A\-P\-I for sending the message to the F\-B page 
+
+\subsection{Function Documentation}
+\hypertarget{send__post_8php_a7c00c6a4981f55404b49962a66b0746a}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$message}
+\end{DoxyParamCaption}
+)}}\label{send__post_8php_a7c00c6a4981f55404b49962a66b0746a}
+Constructor of \hyperlink{classSend__post}{Send\-\_\-post}
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message text \\
+\hline
+\end{DoxyParams}
+\hypertarget{send__post_8php_aab26cf0bb1048ee920848ba27fa96168}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!message@{message}}
+\index{message@{message}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}message (
+\begin{DoxyParamCaption}
+\item[{}]{\$data}
+\end{DoxyParamCaption}
+)}}\label{send__post_8php_aab26cf0bb1048ee920848ba27fa96168}
+Sending message with Face\-Book A\-P\-I and Curl
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & array, basicly including the content\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E if success. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{send__post_8php_a07610c5842cbcf4e9df3c0cc291ddc15}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!\$page\-\_\-access\-\_\-token@{\$page\-\_\-access\-\_\-token}}
+\index{\$page\-\_\-access\-\_\-token@{\$page\-\_\-access\-\_\-token}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{\$page\-\_\-access\-\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}\$page\-\_\-access\-\_\-token = ''}}\label{send__post_8php_a07610c5842cbcf4e9df3c0cc291ddc15}
+The page access token \hypertarget{send__post_8php_a0690e3943aac124dbebc20bfb9419da3}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!\$page\-\_\-id@{\$page\-\_\-id}}
+\index{\$page\-\_\-id@{\$page\-\_\-id}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{\$page\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}\$page\-\_\-id = ''}}\label{send__post_8php_a0690e3943aac124dbebc20bfb9419da3}
+The page id \hypertarget{send__post_8php_a1cce3b6b968431b6802980fa6f949d13}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!\$post\-\_\-url@{\$post\-\_\-url}}
+\index{\$post\-\_\-url@{\$post\-\_\-url}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{\$post\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}\$post\-\_\-url = ''}}\label{send__post_8php_a1cce3b6b968431b6802980fa6f949d13}
+The post url -\/ right now we are not using it \hypertarget{send__post_8php_a92ce328857a58124a9b4eedf35ae17b2}{\index{send\-\_\-post.\-php@{send\-\_\-post.\-php}!Send\-\_\-post@{Send\-\_\-post}}
+\index{Send\-\_\-post@{Send\-\_\-post}!send_post.php@{send\-\_\-post.\-php}}
+\subsubsection[{Send\-\_\-post}]{\setlength{\rightskip}{0pt plus 5cm}Class {\bf Send\-\_\-post}}}\label{send__post_8php_a92ce328857a58124a9b4eedf35ae17b2}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+\{
+    
+    \textcolor{keyword}{private} \hyperlink{process__post_8php_a531e4a386aaa7f3e06d3642dc38d7e80}{$registry}
+\end{DoxyCode}

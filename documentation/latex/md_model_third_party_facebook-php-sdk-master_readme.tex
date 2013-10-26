@@ -1,0 +1,63 @@
+\hyperlink{classFacebook}{Facebook} P\-H\-P S\-D\-K (v.\-3.\-2.\-2)
+
+The \href{http://developers.facebook.com/}{\tt Facebook Platform} is a set of A\-P\-Is that make your app more social.
+
+This repository contains the open source P\-H\-P S\-D\-K that allows you to access \hyperlink{classFacebook}{Facebook} Platform from your P\-H\-P app. Except as otherwise noted, the \hyperlink{classFacebook}{Facebook} P\-H\-P S\-D\-K is licensed under the Apache Licence, Version 2.\-0 (\href{http://www.apache.org/licenses/LICENSE-2.0.html}{\tt http\-://www.\-apache.\-org/licenses/\-L\-I\-C\-E\-N\-S\-E-\/2.\-0.\-html}).
+
+\subsection*{Usage }
+
+The \href{http://github.com/facebook/facebook-php-sdk/blob/master/examples/example.php}{\tt examples} are a good place to start. The minimal you'll need to have is\-: \begin{DoxyVerb}require 'facebook-php-sdk/src/facebook.php';
+
+$facebook = new Facebook(array(
+  'appId'  => 'YOUR_APP_ID',
+  'secret' => 'YOUR_APP_SECRET',
+));
+
+// Get User ID
+$user = $facebook->getUser();
+\end{DoxyVerb}
+
+
+To make \href{http://developers.facebook.com/docs/api}{\tt A\-P\-I} calls\-: \begin{DoxyVerb}if ($user) {
+  try {
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me');
+  } catch (FacebookApiException $e) {
+    error_log($e);
+    $user = null;
+  }
+}
+\end{DoxyVerb}
+
+
+Login or logout url will be needed depending on current user state. \begin{DoxyVerb}if ($user) {
+  $logoutUrl = $facebook->getLogoutUrl();
+} else {
+  $loginUrl = $facebook->getLoginUrl();
+}
+\end{DoxyVerb}
+
+
+\subsection*{Tests }
+
+In order to keep us nimble and allow us to bring you new functionality, without compromising on stability, we have ensured full test coverage of the S\-D\-K. We are including this in the open source repository to assure you of our commitment to quality, but also with the hopes that you will contribute back to help keep it stable. The easiest way to do so is to file bugs and include a test case.
+
+The tests can be executed by using this command from the base directory\-: \begin{DoxyVerb}phpunit --stderr --bootstrap tests/bootstrap.php tests/tests.php
+\end{DoxyVerb}
+
+
+\section*{Contributing }
+
+For us to accept contributions you will have to first have signed the \href{https://developers.facebook.com/opensource/cla}{\tt Contributor License Agreement}.
+
+When commiting, keep all lines to less than 80 characters, and try to follow the existing style.
+
+Before creating a pull request, squash your commits into a single commit.
+
+Add the comments where needed, and provide ample explanation in the commit message.
+
+\section*{Report Issues/\-Bugs }
+
+\href{https://developers.facebook.com/bugs}{\tt Bugs}
+
+\href{http://facebook.stackoverflow.com}{\tt Questions} 

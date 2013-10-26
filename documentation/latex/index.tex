@@ -1,0 +1,40 @@
+Sodot is P\-H\-P application intended for allowing any user to post anonymous messages to any Facebook page.
+
+\subsection*{settings.\-ini}
+
+Copy the files into a any L\-A\-M\-P or W\-A\-M\-P server. Edit settings.\-ini located in the main directory. Fill in the following details\-:
+\begin{DoxyItemize}
+\item My\-S\-Q\-L username
+\item My\-S\-Q\-L password
+\item My\-S\-Q\-L database name
+\item My\-S\-Q\-L table (You can just use the default)
+\item My\-S\-Q\-L host (You can just use localhost if you don't know what is it)
+\item Facebook page I\-D. You can find your Facebook page I\-D by going to this U\-R\-L\-: \href{http://graph.facebook.com/YOUR_FACEBOOK_PAGE_NAME}{\tt http\-://graph.\-facebook.\-com/\-Y\-O\-U\-R\-\_\-\-F\-A\-C\-E\-B\-O\-O\-K\-\_\-\-P\-A\-G\-E\-\_\-\-N\-A\-M\-E} and replace Y\-O\-U\-R\-\_\-\-F\-A\-C\-E\-B\-O\-O\-K\-\_\-\-P\-A\-G\-E\-\_\-\-N\-A\-M\-E with the name of the page or by using tools like \href{http://findmyfacebookid.com/}{\tt http\-://findmyfacebookid.\-com/}
+\item The permanent Facebook access token of the application
+\end{DoxyItemize}
+
+\subsection*{Generating permanent Facebook Access Token}
+
+
+\begin{DoxyItemize}
+\item Create Facebook application and get the A\-P\-P K\-E\-Y.
+\item \hyperlink{classInstall}{Install} the application on your page by going to \href{http://www.facebook.com/add.php?api_key={APP_KEY}&pages}{\tt http\-://www.\-facebook.\-com/add.\-php?api\-\_\-key=\{\-A\-P\-P\-\_\-\-K\-E\-Y\}\&pages} and replace the A\-P\-P\-\_\-\-K\-E\-Y with your Facebook application I\-D.
+\item get the Access token by going to here\-: \href{https://developers.facebook.com/tools/explorer}{\tt https\-://developers.\-facebook.\-com/tools/explorer} and choose your Facebook application and generate the token.
+\item verify it by going to \href{https://developers.facebook.com/tools/debug/access_token}{\tt https\-://developers.\-facebook.\-com/tools/debug/access\-\_\-token} paste the access token and see -\/expires\-: never.
+\end{DoxyItemize}
+
+\subsection*{\hyperlink{classInstall}{Install}}
+
+After configuring the settings.\-ini, \hyperlink{classInstall}{Install} the program by going into /index.php?page=install
+
+\subsection*{Use}
+
+To use the application just go to root directory and write message. It should appear in your facebook page.
+
+\subsection*{T\-O\-D\-O\-:}
+
+
+\begin{DoxyEnumerate}
+\item Automate the F\-B application process.
+\item Insert P\-H\-P testing framework. 
+\end{DoxyEnumerate}
