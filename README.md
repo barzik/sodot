@@ -27,6 +27,15 @@ After configuring the settings.ini, Install the program by going into /index.php
 ## Use
 To use the application just go to root directory and write message. It should appear in your facebook page.
 
+## Test
+Sodot is using PHPUnit testing frameworl. in order to test it, just go to the test directory and type 'phpunit .'
+
+## Documentation
+Documentation is available at /documentation/html/
+
+## Regenerate doxygen
+Sodot is using Doxygen to auto document. for regenerating the documentation, go to the root directory and type 'doxygen Doxyfile' 
+
 ## TODO:
 1. Automate the FB application process.
-2. Insert PHP testing framework.
+2. Insert PHP testing.
