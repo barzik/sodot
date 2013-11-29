@@ -30,21 +30,25 @@ private $registry;
      */
 
 	public function __construct() {
-		$this->registry = new Registry();
-		$this->db_instance = Database::getInstance(); 	
-		$this->result = $this->createTable($this->registry->table_name);
+		$this->registry = Registry::getInstance();
+		$this->db_instance = Database::getInstance(); 
+		$this->createTable($this->registry->table_name);
 		
     } 
 	
 	/**
      * getting the result of the installation process.
-	 * @return			string to be displayed.
+	 * @return boolean
      */
 	
 	public function getResult() {
-		if($this->result == TRUE) {
-			return 'Installation success!';
-		} 
+			$results = $this->db_instance->exec(sprintf("SHOW TABLES LIKE '%s'", $this->registry->table_name));
+			if(!$results) {
+				return FALSE;
+			}
+			if($results->rowCount()>0){
+				return TRUE;
+			}
 	}
 	
 	
@@ -69,7 +73,7 @@ private $registry;
 			'ip' => 'VARCHAR(30) NOT NULL',
 			'content' => 'TEXT NOT NULL'
 		);	
-
+		$fields_string = '';
 		foreach($fields as $field => $type) {
 		  $fields_string.= "$field $type,";
 		}

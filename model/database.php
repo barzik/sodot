@@ -27,12 +27,11 @@ class Database extends PDO
 	public static function getInstance() { 
 		
 		if (!self::$registry) { 
-			self::$registry = new Registry();
+			self::$registry = Registry::getInstance();
 		}
 		
 		if (!self::$db_instance) { 
 			try {
-				
 				$dsn = sprintf("mysql:dbname=%s;host=%s",self::$registry->db_name, self::$registry->db_host);
 				self::$db_instance = new Database($dsn, self::$registry->db_user, self::$registry->db_password); 
 			} catch (PDOException $e) {

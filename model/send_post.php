@@ -38,7 +38,7 @@ Class Send_post {
      */
 	
 	 public function __construct($message) {
-		$this->registry = new Registry();
+		$this->registry = Registry::getInstance();
 		$this->page_id = $this->registry->page_id;
 		$this->page_access_token = $this->registry->page_access_token;
 		

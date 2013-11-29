@@ -15,14 +15,29 @@ class Registry {
 	/**
 	* The variables of the registry 
 	*/
-	public $vars = array();
+	public static $vars = array();
+	
+	// Store the single instance of Registry
+    private static $registry; 
 
     /**
      * Constructor of Registry
      */
-	public function __construct() {
-		$this->vars = parse_ini_file(realpath('../settings.ini'));
+	private function __construct() {
+		self::$vars = parse_ini_file(realpath('../settings.ini'));
 	}
+	
+	/**
+	* Signleton get instance implementation
+	*/ 
+	
+	public static function getInstance() { 
+		if (!self::$registry) { 
+			self::$registry = new Registry(); 
+		} 
+		return self::$registry; 
+	}  
+	
 	
 	 /**
      * Setter of registry item
@@ -34,7 +49,7 @@ class Registry {
      */
 	
     public function __set($key, $val) {
-        $this->vars[$key] = $val;
+        self::$vars[$key] = $val;
     }
 	
 	/**
@@ -46,8 +61,8 @@ class Registry {
      */
 
 	public function __get($key) {
-		if (array_key_exists($key, $this->vars)) {
-			return $this->vars[$key];
+		if (array_key_exists($key, self::$vars)) {
+			return self::$vars[$key];
 		} else {
 			return null;
 		}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+  <testsuites>
+    <testsuite name="Sodot tests">
+		<file>registryTest.php</file>
+		<file>installTest.php</file>
+		<file>verificationTest.php</file>
+    </testsuite>
+  </testsuites>
+  <php>
+	<server name="REMOTE_ADDR" value="127.0.0.1"/>
+</php>
+  
+</phpunit>

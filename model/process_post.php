@@ -36,7 +36,7 @@ Class Process_post {
      */
 	
 	public function __construct($post) {
-		$this->registry = new Registry();
+		$this->registry = Registry::getInstance();
 		$this->db_instance = Database::getInstance(); 
 		
         $this->result['content'] = $this->sanitise_post($post['message']);

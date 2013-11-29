@@ -37,7 +37,7 @@ Class Verification {
      */
 	
 	public function __construct($post_array) {
-		$this->registry = new Registry();
+		$this->registry = Registry::getInstance();
 		$this->db_instance = Database::getInstance(); 
 		$this->result['verification_check_for_double_ip'] = $this->verification_check_for_double_ip($post_array['ip']);
 		$this->result['verification_filter_links'] = $this->verification_filter_links($post_array['content']);
